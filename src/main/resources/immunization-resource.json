@@ -1,0 +1,506 @@
+{
+  "resourceType": "Bundle",
+  "id": "immunization-bundle-001",
+  "meta": {
+    "lastUpdated": "2023-10-15T10:00:00-04:00"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "Location/downtown-medical",
+      "resource": {
+        "resourceType": "Location",
+        "id": "downtown-medical",
+        "status": "active",
+        "name": "Downtown Medical Center",
+        "description": "Primary care and specialty medical center in downtown area",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1-555-0101",
+            "use": "work"
+          }
+        ],
+        "address": {
+          "use": "work",
+          "line": ["123 Main Street"],
+          "city": "Springfield",
+          "state": "IL",
+          "postalCode": "62701",
+          "country": "US"
+        },
+        "sites": [
+          {
+            "id": "downtown-medical-site-1",
+            "name": "Main Clinic Wing",
+            "description": "Primary vaccination center",
+            "immunization": {
+              "resourceType": "Immunization",
+              "id": "example-immunization-1",
+              "status": "completed",
+              "vaccineCode": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/cvx",
+                    "code": "207",
+                    "display": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose"
+                  }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/patient-123",
+                "display": "John Doe"
+              },
+              "occurrenceDateTime": "2023-10-15T09:30:00-04:00",
+              "recorded": "2023-10-15T09:35:00-04:00",
+              "primarySource": true,
+              "manufacturer": {
+                "display": "Pfizer-BioNTech"
+              },
+              "lotNumber": "ABC123",
+              "expirationDate": "2024-06-30",
+              "site": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+                    "code": "LA",
+                    "display": "left arm"
+                  }
+                ]
+              },
+              "route": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+                    "code": "IM",
+                    "display": "Injection, intramuscular"
+                  }
+                ]
+              },
+              "doseQuantity": {
+                "value": 0.3,
+                "unit": "mL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
+              },
+              "performer": [
+                {
+                  "function": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                        "code": "AP",
+                        "display": "Administering Provider"
+                      }
+                    ]
+                  },
+                  "actor": {
+                    "reference": "Practitioner/dr-smith",
+                    "display": "Dr. Jane Smith"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "id": "downtown-medical-site-2",
+            "name": "Emergency Department",
+            "description": "Emergency vaccination services",
+            "immunization": {
+              "resourceType": "Immunization",
+              "id": "example-immunization-4",
+              "status": "completed",
+              "vaccineCode": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/cvx",
+                    "code": "08",
+                    "display": "Hepatitis B, adolescent or pediatric"
+                  }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/patient-999",
+                "display": "Michael Brown"
+              },
+              "occurrenceDateTime": "2023-11-01T16:45:00-04:00",
+              "recorded": "2023-11-01T16:50:00-04:00",
+              "primarySource": true,
+              "manufacturer": {
+                "display": "Merck"
+              },
+              "lotNumber": "HEPB456",
+              "expirationDate": "2025-08-30",
+              "site": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+                    "code": "RA",
+                    "display": "right arm"
+                  }
+                ]
+              },
+              "route": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+                    "code": "IM",
+                    "display": "Injection, intramuscular"
+                  }
+                ]
+              },
+              "doseQuantity": {
+                "value": 0.5,
+                "unit": "mL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
+              },
+              "performer": [
+                {
+                  "function": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                        "code": "AP",
+                        "display": "Administering Provider"
+                      }
+                    ]
+                  },
+                  "actor": {
+                    "reference": "Practitioner/dr-wilson",
+                    "display": "Dr. Robert Wilson"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "immunization": {
+          "resourceType": "Immunization",
+          "id": "example-immunization-1",
+          "status": "completed",
+          "vaccineCode": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/cvx",
+                "code": "207",
+                "display": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose"
+              }
+            ]
+          },
+          "patient": {
+            "reference": "Patient/patient-123",
+            "display": "John Doe"
+          },
+          "occurrenceDateTime": "2023-10-15T09:30:00-04:00",
+          "recorded": "2023-10-15T09:35:00-04:00",
+          "primarySource": true,
+          "manufacturer": {
+            "display": "Pfizer-BioNTech"
+          },
+          "lotNumber": "ABC123",
+          "expirationDate": "2024-06-30",
+          "site": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+                "code": "LA",
+                "display": "left arm"
+              }
+            ]
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+                "code": "IM",
+                "display": "Injection, intramuscular"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 0.3,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          },
+          "performer": [
+            {
+              "function": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                    "code": "AP",
+                    "display": "Administering Provider"
+                  }
+                ]
+              },
+              "actor": {
+                "reference": "Practitioner/dr-smith",
+                "display": "Dr. Jane Smith"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Location/westside-family",
+      "resource": {
+        "resourceType": "Location",
+        "id": "westside-family",
+        "status": "active",
+        "name": "Westside Family Clinic",
+        "description": "Community family practice clinic serving west side neighborhoods",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1-555-0202",
+            "use": "work"
+          }
+        ],
+        "address": {
+          "use": "work",
+          "line": ["456 Elm Avenue"],
+          "city": "Springfield",
+          "state": "IL",
+          "postalCode": "62704",
+          "country": "US"
+        },
+        "sites": [
+          {
+            "id": "westside-family-site-1",
+            "name": "Emergency Department",
+            "description": "Emergency vaccination services",
+            "immunization": {
+              "resourceType": "Immunization",
+              "id": "example-immunization-5",
+              "status": "completed",
+              "vaccineCode": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/cvx",
+                    "code": "08",
+                    "display": "Hepatitis B, adolescent or pediatric"
+                  }
+                ]
+              },
+              "patient": {
+                "reference": "Patient/patient-888",
+                "display": "Sarah Johnson"
+              },
+              "occurrenceDateTime": "2023-11-15T14:30:00-04:00",
+              "recorded": "2023-11-15T14:35:00-04:00",
+              "primarySource": true,
+              "manufacturer": {
+                "display": "Merck"
+              },
+              "lotNumber": "HEPB789",
+              "expirationDate": "2025-09-30",
+              "site": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+                    "code": "LA",
+                    "display": "left arm"
+                  }
+                ]
+              },
+              "route": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+                    "code": "IM",
+                    "display": "Injection, intramuscular"
+                  }
+                ]
+              },
+              "doseQuantity": {
+                "value": 0.5,
+                "unit": "mL",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
+              },
+              "performer": [
+                {
+                  "function": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                        "code": "AP",
+                        "display": "Administering Provider"
+                      }
+                    ]
+                  },
+                  "actor": {
+                    "reference": "Practitioner/dr-davis",
+                    "display": "Dr. Emily Davis"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "immunization": {
+          "resourceType": "Immunization",
+          "id": "example-immunization-2",
+          "status": "completed",
+          "vaccineCode": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/cvx",
+                "code": "141",
+                "display": "Influenza, seasonal, injectable"
+              }
+            ]
+          },
+          "patient": {
+            "reference": "Patient/patient-456",
+            "display": "Jane Smith"
+          },
+          "occurrenceDateTime": "2023-09-20T14:15:00-04:00",
+          "recorded": "2023-09-20T14:20:00-04:00",
+          "primarySource": true,
+          "manufacturer": {
+            "display": "Sanofi Pasteur"
+          },
+          "lotNumber": "FLU2023",
+          "expirationDate": "2024-03-31",
+          "site": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+                "code": "RA",
+                "display": "right arm"
+              }
+            ]
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+                "code": "IM",
+                "display": "Injection, intramuscular"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 0.5,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          },
+          "performer": [
+            {
+              "function": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                    "code": "AP",
+                    "display": "Administering Provider"
+                  }
+                ]
+              },
+              "actor": {
+                "reference": "Practitioner/dr-johnson",
+                "display": "Dr. Michael Johnson"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Location/eastside-health",
+      "resource": {
+        "resourceType": "Location",
+        "id": "eastside-health",
+        "status": "active",
+        "name": "Eastside Health Center",
+        "description": "Comprehensive health services for east side community",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1-555-0303",
+            "use": "work"
+          }
+        ],
+        "address": {
+          "use": "work",
+          "line": ["789 Oak Boulevard"],
+          "city": "Springfield",
+          "state": "IL",
+          "postalCode": "62702",
+          "country": "US"
+        },
+        "immunization": {
+          "resourceType": "Immunization",
+          "id": "example-immunization-3",
+          "status": "completed",
+          "vaccineCode": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/cvx",
+                "code": "115",
+                "display": "Tdap"
+              }
+            ]
+          },
+          "patient": {
+            "reference": "Patient/patient-789",
+            "display": "Robert Wilson"
+          },
+          "occurrenceDateTime": "2023-08-10T11:45:00-04:00",
+          "recorded": "2023-08-10T11:50:00-04:00",
+          "primarySource": true,
+          "manufacturer": {
+            "display": "GlaxoSmithKline"
+          },
+          "lotNumber": "TDAP789",
+          "expirationDate": "2025-12-31",
+          "site": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+                "code": "LT",
+                "display": "left thigh"
+              }
+            ]
+          },
+          "route": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+                "code": "IM",
+                "display": "Injection, intramuscular"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 0.5,
+            "unit": "mL",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          },
+          "performer": [
+            {
+              "function": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                    "code": "AP",
+                    "display": "Administering Provider"
+                  }
+                ]
+              },
+              "actor": {
+                "reference": "Practitioner/dr-brown",
+                "display": "Dr. Sarah Brown"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
